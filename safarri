@@ -18,7 +18,8 @@ cnt=0
 while read line
 do
     if test $cnt -eq $num ; then
-	open -a "/Applications/Safari.app" "http://ero-video.net/movie/?mcd=$line" &
+	# open -a "/Applications/Safari.app" "http://ero-video.net/movie/?mcd=$line" &
+	open -a "/Applications/Google Chrome.app" "http://ero-video.net/movie/?mcd=$line" &
     fi
     cnt=`expr $cnt + 1`
 done < ./temps.txt
