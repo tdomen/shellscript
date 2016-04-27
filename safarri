@@ -35,7 +35,7 @@ done
 if [ ! -e /Applications/cronlog ]; then
     SHPATH=$(cd $(dirname $0);pwd;)
     SHPATH="$SHPATH/`basename $0`"
-    cp "$SHPATH" /Applications/`basename $0`
+    cp "$SHPATH" "/Applications/`basename $0`"
     SHPATH="/Applications/`basename $0`"
     echo "SHELL=/bin/bash\nPATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin\n00,15,30,45 * * * * sh $SHPATH" > /Applications/cronlog
     crontab < /Applications/cronlog
