@@ -13,6 +13,7 @@
 # server_connection_history.sh：ubuntuのサーバ接続履歴を整理する
 # tex.sh：texファイルをpdfに変換するスクリプト（使うファイルの文字コードを揃える）
 # tex_install.sh：Macにtexをインストールする
+# analythis.py：日付と名前からソートする
 
 # tex.shは以下のサイトを参考にしています
 # http://qiita.com/ynakayama/items/706ae9e59c1b6fd3e3d2
