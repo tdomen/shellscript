@@ -2,20 +2,28 @@
 
 ## adduser.sh  
   * linux上にユーザを追加して鍵を登録する  
+
 ## backup.sh  
   * rsyncを使った差分バックアップ  
+
 ## backup_ssh.sh  
   * ssh越しにrsyncを使う方法  
+
 ## bc.sh  
   * 小数を扱うコマンド「bc」の使い方  
+
 ## charcode.sh  
   * 同一ディレクトリ内にあるファイルの文字コードを変換  
+
 ## codefind.sh  
   * プログラムコード内の文字列を検索（置換）する  
+
 ## install_tinyos.sh  
   * tinyos-2.xをインストールする  
+
 ## pdfserch.sh  
   * pdf内の文字列を検索  
+
 ## plot.sh  
   * gnuplotを使ったグラフ作成  
 ## safarri  
