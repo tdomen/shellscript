@@ -26,19 +26,26 @@
 
 ## plot.sh  
   * gnuplotを使ったグラフ作成  
+
 ## safarri  
   * いたずらスクリプトfor Mac  
+
 ## scraping.sh  
   * 画像をスクレイピングする  
+
 ## sed.sh  
   * 「sed」コマンドの使い方  
+
 ## server_connection_history.sh  
   * ubuntuのサーバ接続履歴を整理する  
+
 ## tex.sh  
   * texファイルをpdfに変換するスクリプト（使うファイルの文字コードを揃える）  
   * 参考[モダンな日本語Tex環境を整える - Qiita](http://qiita.com/ynakayama/items/706ae9e59c1b6fd3e3d2)  
+
 ## tex_install.sh  
   * Macにtexをインストールする  
+
 ## analythis.py  
   * 日付と名前からソートする  
 
